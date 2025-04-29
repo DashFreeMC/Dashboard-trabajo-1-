@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Análisis Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Análisis Digital</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#kpis">KPIs</a></li>
+                <li><a href="#visualizaciones">Visualizaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>Este dashboard muestra los principales indicadores clave de rendimiento (KPIs) del análisis de plataformas digitales.</p>
+        </section>
+
+        <section id="kpis">
+            <h2>KPIs Clave</h2>
+            <label for="kpiSelect">Selecciona un KPI:</label>
+            <select id="kpiSelect">
+                <option value="CTR">CTR Facebook</option>
+                <option value="Rebote">Tasa de Rebote</option>
+                <option value="Adquisicion">Adquisición</option>
+                <option value="Sentimiento">Análisis de Sentimiento</option>
+            </select>
+            <button onclick="mostrarKPI()">Ver KPI</button>
+            <p id="descripcionKPI">Selecciona un KPI para ver la descripción.</p>
+        </section>
+
+        <section id="visualizaciones">
+            <h2>Visualizaciones</h2>
+            <div class="grafico-container">
+                <canvas id="ctrChart"></canvas>
+            </div>
+            <div class="grafico-container">
+                <canvas id="reboteChart"></canvas>
+            </div>
+            <div class="grafico-container">
+                <canvas id="adqChart"></canvas>
+            </div>
+            <div class="grafico-container">
+                <canvas id="sentimChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dashboard desarrollado por el equipo de análisis digital - Proyecto Final</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
